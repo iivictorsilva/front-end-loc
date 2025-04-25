@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Cadastro - LocCar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="assents/styles/styles.css">
+    <style>
+        /* Estilos para corrigir os problemas visuais */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .form-container h1 {
+            margin-bottom: 20px;
+        }
+        
+        .overlay-panel {
+            text-align: center;
+        }
+        
+        .overlay-panel h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .overlay-panel p {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        
+        .ghost {
+            background-color: transparent;
+            border: 1px solid #FFF;
+            color: #FFF;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        
+        .forgot {
+            color: #333;
+            font-size: 12px;
+            text-decoration: none;
+            margin: 10px 0;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            
+            <form action="phpLogin/criar.php" method="POST">
+                <h1>Criar uma conta</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>ou use seu e-mail para registro</span>
+                <div class="infield">
+                    <input type="text" placeholder="Nome" name="nome" required />
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="email" placeholder="Email" name="email" required />
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="password" placeholder="Senha" name="senha" required minlength="6" />
+                    <label></label>
+                </div>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="phpLogin/login.php" method="POST">
+                <h1>Entrar</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>ou use sua conta</span>
+                <div class="infield">
+                    <input type="email" placeholder="Email" name="email" required />
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="password" placeholder="Senha" name="senha" required />
+                    <label></label>
+                </div>
+                <a href="#" class="forgot">Esqueceu sua senha?</a>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+        <div class="overlay-container" id="overlayCon">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Bem-vindo de volta!</h1>
+                    <p>Para continuar conectado conosco, faça login com suas informações pessoais</p>
+                    <button class="ghost" id="signIn">Entrar</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Olá amigo!</h1>
+                    <p>Insira seus dados pessoais e comece sua jornada conosco</p>
+                    <button class="ghost" id="signUp">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <script src="assents/js/script.js"></script>
+</body>
+</html>
